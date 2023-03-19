@@ -25,7 +25,7 @@
 	position: absolute;
 	right: 3rem;
 	top: 7.9rem;
-	background-image: url(../img/eye_contrast_icon.png);
+	/* background-image: url(../public/img/eye_contrast_icon.png); */
 	background-position: top;
 	background-size: contain;
 	width: 2.5rem;
@@ -142,7 +142,7 @@
 	position: absolute;
 	right: 3rem;
 	top: 7.9rem;
-	background-image: url(../img/eye_contrast_icon.png);
+	background-image: url(../public/img/eye_contrast_icon.png);
 	background-position: top;
 	background-size: contain;
 	width: 2.5rem;
@@ -234,7 +234,7 @@
 }
 .actus {
 	position: relative;
-	background: url(../img/Frozen-bamboo-island-898648.png);
+	background: url(../public/img/Frozen-bamboo-island-898648.png);
 	padding: 7em 0;
 	display: flex;
 	flex-direction: column;
@@ -324,7 +324,7 @@
 	position: absolute;
 	right: 3rem;
 	top: 7.9rem;
-	background-image: url(../img/eye_contrast_icon.png);
+	background-image: url(../public/img/eye_contrast_icon.png);
 	background-position: top;
 	background-size: contain;
 	width: 2.5rem;
@@ -421,7 +421,7 @@
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	background-image: url(../img/Frozen-bamboo-island-898648.png);
+	background-image: url(../public/img/Frozen-bamboo-island-898648.png);
 	background-size: cover;
 	background-position: center;
 	color: #2e2e2e;
@@ -527,7 +527,7 @@
 	position: absolute;
 	right: 3rem;
 	top: 7.9rem;
-	background-image: url(../img/eye_contrast_icon.png);
+	background-image: url(../public/img/eye_contrast_icon.png);
 	background-position: top;
 	background-size: contain;
 	width: 2.5rem;
@@ -872,14 +872,14 @@ img {
 }
 .header__logo--1 {
 	background-color: #294294;
-	background-image: url(../img//life.jpg);
+	background-image: url(../public/img/life.jpg);
 }
 .header__logo--2 {
 	background-size: contain;
-	background-image: url(../img/natura2000.png);
+	background-image: url(../public/img/natura2000.png);
 }
 .header__logo--3 {
-	background-image: url(../img/nfog.png);
+	background-image: url(../public/img/nfog.png);
 }
 
 .eco {
@@ -920,7 +920,7 @@ img {
 			rgba(7, 7, 7, 0.331),
 			rgba(22, 21, 21, 0.457)
 		),
-		url("../img/Little-river-in-a-forest_About_Project.jpg");
+		url("../public/img/Little-river-in-a-forest_About_Project.jpg");
 	background-size: cover;
 	background-position: center;
 	background-attachment: fixed;
@@ -970,7 +970,7 @@ img {
 			rgba(7, 7, 7, 0.331),
 			rgba(22, 21, 21, 0.457)
 		),
-		url(../img/actu_1.jpg);
+		url(../public/img/actu_1.jpg);
 }
 .actu__card-img--second {
 	background-image: linear-gradient(
@@ -978,7 +978,7 @@ img {
 			rgba(7, 7, 7, 0.331),
 			rgba(22, 21, 21, 0.457)
 		),
-		url(../img/actu_2.jpg);
+		url(../public/img/actu_2.jpg);
 }
 .actu__card-img--third {
 	background-image: linear-gradient(
@@ -986,7 +986,7 @@ img {
 			rgba(7, 7, 7, 0.331),
 			rgba(22, 21, 21, 0.457)
 		),
-		url(../img/actu_3.png);
+		url(../public/img/actu_3.png);
 }
 .actu__card-img-title {
 	font-size: 2.8rem;
@@ -1350,7 +1350,7 @@ img {
 }
 
 .contrast__logo--1 {
-	background-image: url(../img/logo_LIFE_nb.jpg);
+	background-image: url(../public/img/logo_LIFE_nb.jpg);
 	background-position: center;
 	background-size: contain;
 	background-repeat: no-repeat;
@@ -1358,7 +1358,7 @@ img {
 }
 
 .contrast__logo--2 {
-	background-image: url(../img/natura2000_bw.jpg);
+	background-image: url(../public/img/natura2000_bw.jpg);
 	background-position: center;
 	background-size: contain;
 	background-repeat: no-repeat;
@@ -1366,7 +1366,7 @@ img {
 }
 
 .contrast__logo--3 {
-	background-image: url(../img/nfog_BW.png);
+	background-image: url(../public/img/nfog_BW.png);
 	background-position: center;
 	background-size: contain;
 	background-repeat: no-repeat;
@@ -1374,7 +1374,7 @@ img {
 }
 
 .contrast-box--logo {
-	background-image: url(../img/eye_white.jpg);
+	background-image: url(../public/img/eye_white.jpg);
 	background-position: center;
 	background-size: contain;
 	background-repeat: no-repeat;
