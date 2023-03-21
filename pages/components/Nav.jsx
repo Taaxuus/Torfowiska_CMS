@@ -49,7 +49,17 @@ const Navigation = () => {
 						Aktualności
 					</Link>
 
-					<Link onClick={handleNav} href="#about" className={navItemClass}>
+					<Link
+						activeClass="active"
+						to="about"
+						spy={true}
+						smooth={true}
+						// offset={-70}
+						duration={200}
+						href="#actu"
+						onClick={handleNav}
+						href="#about"
+						className={navItemClass}>
 						O projekcie
 					</Link>
 					<Link onClick={handleNav} href="#eco" className={navItemClass}>
