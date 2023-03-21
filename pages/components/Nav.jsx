@@ -56,9 +56,8 @@ const Navigation = () => {
 						smooth={true}
 						// offset={-70}
 						duration={200}
-						href="#actu"
-						onClick={handleNav}
 						href="#about"
+						onClick={handleNav}
 						className={navItemClass}>
 						O projekcie
 					</Link>
