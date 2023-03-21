@@ -1,53 +1,72 @@
-import Link from "next/link";
+// import Link from "next/link";
+import { useState } from "react";
+import { Link, animateScroll as scroll } from "react-scroll";
 
 const Navigation = () => {
-	// const handleNav = () => {
-	// 	nav.classList.toggle("nav--active");
+	const [btnActvie, setBtnActvie] = useState(true);
+	const [navClass, setNavClass] = useState("nav");
+	const [navItemClass, setnavItemClass] = useState("nav__item");
 
-	// 	navBtnBars.classList.remove("black-bars-color");
-
-	// 	allNavItems.forEach((item) => {
-	// 		item.addEventListener("click", () => {
-	// 			nav.classList.remove("nav--active");
-	// 		});
-	// 	});
-
-	// 	handleNavItemsAnimation();
-	// };
-
-	// const handleNavItemsAnimation = () => {
-	// 	let delayTime = 0;
-
-	// 	allNavItems.forEach((item) => {
-	// 		item.classList.toggle("nav-items-animation");
-	// 		item.style.animationDelay = "." + delayTime + "s";
-	// 		delayTime++;
-	// 	});
-	// };
+	const handleNav = () => {
+		setBtnActvie((prevActive) => !prevActive);
+		setNavClass(btnActvie ? " nav nav--active" : "nav");
+		setnavItemClass(btnActvie ? "nav__item nav-items-animation" : "nav__item");
+	};
 
 	return (
-		<nav className="nav">
-			<div className="nav__items">
-				<Link href="/" className="nav__item">
-					Strona Główna
-				</Link>
-				<Link href="#actu" className="nav__item">
-					Aktualności
-				</Link>
-				<Link href="#about" className="nav__item">
-					O projekcie
-				</Link>
-				<Link href="#eco" className="nav__item">
-					Ekosystemy
-				</Link>
-				<Link href="#contact" className="nav__item">
-					Kontakt
-				</Link>
-				<Link href="./publiorders.html" className="nav__item">
-					Zamówienia
-				</Link>
-			</div>
-		</nav>
+		<>
+			<button onClick={handleNav} className="burger-btn">
+				<div className="burger-btn__box">
+					<div className="burger-btn__bars"></div>
+				</div>
+			</button>
+
+			<nav className={navClass}>
+				<div className="nav__items">
+					<Link
+						activeClass="active"
+						to="header"
+						spy={true}
+						smooth={true}
+						// offset={-70}
+						duration={200}
+						scroll={true}
+						href="/"
+						onClick={handleNav}
+						className={navItemClass}>
+						Strona Główna
+					</Link>
+					<Link
+						activeClass="active"
+						to="actu"
+						spy={true}
+						smooth={true}
+						// offset={-70}
+						duration={200}
+						href="#actu"
+						onClick={handleNav}
+						className={navItemClass}>
+						Aktualności
+					</Link>
+
+					<Link onClick={handleNav} href="#about" className={navItemClass}>
+						O projekcie
+					</Link>
+					<Link onClick={handleNav} href="#eco" className={navItemClass}>
+						Ekosystemy
+					</Link>
+					<Link onClick={handleNav} href="#contact" className={navItemClass}>
+						Kontakt
+					</Link>
+					<Link
+						onClick={handleNav}
+						href="./publiorders.html"
+						className={navItemClass}>
+						Zamówienia
+					</Link>
+				</div>
+			</nav>
+		</>
 	);
 };
 

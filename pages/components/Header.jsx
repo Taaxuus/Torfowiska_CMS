@@ -2,7 +2,7 @@ import React from "react";
 
 const Header = () => {
 	return (
-		<header className="header section">
+		<header id="header" className="header section">
 			<button className="contrast-box"></button>
 			<video
 				id="videoPlayer"
