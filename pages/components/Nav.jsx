@@ -28,7 +28,6 @@ const Navigation = () => {
 						to="header"
 						spy={true}
 						smooth={true}
-						// offset={-70}
 						duration={200}
 						scroll={true}
 						href="/"
@@ -41,7 +40,6 @@ const Navigation = () => {
 						to="actu"
 						spy={true}
 						smooth={true}
-						// offset={-70}
 						duration={200}
 						href="#actu"
 						onClick={handleNav}
@@ -61,10 +59,26 @@ const Navigation = () => {
 						className={navItemClass}>
 						O projekcie
 					</Link>
-					<Link onClick={handleNav} href="#eco" className={navItemClass}>
+					<Link
+						activeClass="active"
+						to="eco"
+						spy={true}
+						smooth={true}
+						duration={200}
+						href="#eco"
+						onClick={handleNav}
+						className={navItemClass}>
 						Ekosystemy
 					</Link>
-					<Link onClick={handleNav} href="#contact" className={navItemClass}>
+					<Link
+						activeClass="active"
+						to="contact"
+						spy={true}
+						smooth={true}
+						duration={200}
+						href="#contact"
+						onClick={handleNav}
+						className={navItemClass}>
 						Kontakt
 					</Link>
 					<Link

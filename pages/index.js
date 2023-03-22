@@ -1,11 +1,9 @@
 import Head from "next/head";
 import Image from "next/image";
-import { Inter } from "next/font/google";
 import Header from "./components/Header";
 import Nav from "./components/Nav";
 import Main from "./components/Main";
-
-const inter = Inter({ subsets: ["latin"] });
+import Footer from "./components/Footer";
 
 export default function Home() {
 	return (
@@ -29,6 +27,7 @@ export default function Home() {
 			<Nav />
 			<Header />
 			<Main />
+			<Footer />
 		</>
 	);
 }
