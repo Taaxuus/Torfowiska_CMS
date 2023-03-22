@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 const Actu1 = () => {
 	return (
 		<>
@@ -19,7 +21,7 @@ const Actu1 = () => {
 						</li>
 					</ul>
 					<button className="actu__card-info-btn btn-special-animation">
-						<a href="./actu_1.html">Czytaj wiecej</a>
+						<Link href="./actu_1.html">Czytaj wiecej</Link>
 					</button>
 				</div>
 			</div>

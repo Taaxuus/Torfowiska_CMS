@@ -1,4 +1,4 @@
-import { Link, animateScroll as scroll } from "react-scroll";
+import Link from "next/link";
 import Cookie from "./Cookie";
 import { useEffect, useState } from "react";
 const Footer = () => {
@@ -34,9 +34,9 @@ const Footer = () => {
 								<li className="footer__box-list-item">
 									<p id="contact" className="contact__box--mail">
 										e-mail:{" "}
-										<a className="email" href="mailto:biuro@wetlands.pl">
+										<Link className="email" href="mailto:biuro@wetlands.pl">
 											biuro@wetlands.pl
-										</a>
+										</Link>
 										<br />
 										tel. 22 825 34 23
 									</p>
@@ -56,81 +56,56 @@ const Footer = () => {
 								Nr projektu: LIFE21 IPE/PL/069640
 							</p>
 							<div className="footer__box-social">
-								<a
+								<Link
 									href="https://twitter.com/wetlands_pl"
 									className="footer__box-link"
 									target="_blank">
 									<i className="fab fa-twitter-square"></i>
-								</a>
-								<a
+								</Link>
+
+								<Link
 									href="https://www.facebook.com/wetlands.green.life"
 									className="footer__box-link"
 									target="_blank">
 									<i className="fab fa-facebook-square"></i>
-								</a>
-								<a
+								</Link>
+
+								<Link
 									href="https://www.instagram.com/wetlands_green_life/"
 									className="footer__box-link"
 									target="_blank">
 									<i className="fab fa-instagram"></i>
-								</a>
-								<a
+								</Link>
+								<Link
 									href="https://www.youtube.com/@wetlands_green_life"
 									className="footer__box-link"
 									target="_blank">
 									<i className="fab fa-youtube"></i>
-								</a>
-								<a
+								</Link>
+								<Link
 									href="https://www.tiktok.com/@wetlands.pl"
 									className="footer__box-link"
 									target="_blank">
 									<i className="fab fa-tiktok"></i>
-								</a>
+								</Link>
 							</div>
 						</div>
 						<div className="footer__box footer__box-desktop">
 							<h3 className="footer__box-title">Menu</h3>
 							<ul className="footer__box-list">
 								<li className="footer__box-list-item">
-									<Link
-										activeClass="active"
-										to="actu"
-										spy={true}
-										smooth={true}
-										duration={200}
-										scroll={true}
-										href="#actu">
-										Aktualności
-									</Link>
+									<Link href="#actu">Aktualności</Link>
 								</li>
 								<li className="footer__box-list-item">
-									<Link
-										activeClass="active"
-										to="about"
-										spy={true}
-										smooth={true}
-										duration={200}
-										scroll={true}
-										href="#about">
-										O projekcie
-									</Link>
+									<Link href="#about">O projekcie</Link>
 								</li>
 								<li className="footer__box-list-item">
-									<Link
-										activeClass="active"
-										to="eco"
-										spy={true}
-										smooth={true}
-										duration={200}
-										scroll={true}
-										href="#eco">
-										Ekosystemy
-									</Link>
+									<Link href="#eco">Ekosystemy</Link>
 								</li>
 								<li className="footer__box-list-item">
-									<a href="./rodo.html " target="_blank">
+									<Link href="./rodo.html " target="_blank">
 										Polityka prywatności &amp; RODO
-									</a>
+									</Link>
 								</li>
 							</ul>
 						</div>
