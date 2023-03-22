@@ -1,0 +1,110 @@
+@import "./colors";
+@import "./components";
+@import "./mixins";
+
+.public-orders {
+	position: relative;
+	padding: 1em;
+	height: 100vh;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	background-image: url(../public/img/Frozen-bamboo-island-898648.png);
+	background-size: cover;
+	background-position: center;
+	color: $dark;
+
+	&::before {
+		content: "";
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background-color: black;
+		opacity: 0.5;
+		z-index: 0;
+	}
+
+	.wrapper {
+		display: flex;
+		justify-content: center;
+	}
+
+	&__title {
+		z-index: 1;
+		color: $pure-white;
+		text-align: center;
+		padding: 2em 1em 1em 1em;
+		font-size: 4rem;
+	}
+
+	&__table {
+		z-index: 1;
+		width: 80vw;
+		padding: 0.4em;
+		background-color: #fff;
+		border-radius: 16px;
+		th {
+			text-align: center;
+			font-size: 1.8rem;
+			border-bottom: 1px solid $light-white;
+			font-weight: bold;
+		}
+	}
+
+	&__order {
+		text-align: justify;
+		td {
+			padding: 0.3em;
+			font-size: 1.4rem;
+			border-bottom: 1px solid $light-white;
+		}
+	}
+
+	.ul-list {
+		list-style: none;
+		li {
+			padding: 0.3em;
+			text-align: left;
+			transition: all 0.3s;
+
+			&:hover {
+				scale: 1.07;
+			}
+			a {
+				font-size: 1.3rem;
+				margin-right: 0.5rem;
+			}
+		}
+	}
+}
+
+@media (min-width: 768px) {
+	.public-orders {
+		&__title {
+			font-size: 3em;
+		}
+
+		&__table {
+			th {
+				font-size: 2.4rem;
+			}
+		}
+
+		&__order {
+			td {
+				text-align: center;
+				font-size: 2rem;
+			}
+		}
+
+		.ul-list {
+			li {
+				a {
+					font-size: 2rem;
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,52 @@
+@mixin burgerBtn {
+	position: absolute;
+	right: 0;
+	height: 3px;
+	content: "";
+	background-color: $pure-white;
+	transition: width 0.3s;
+}
+
+@mixin heroImages($bgImg) {
+	background-image: $dark-gradient, url($bgImg);
+	background-size: cover;
+	background-position: center;
+	background-attachment: fixed;
+}
+
+@mixin actuCardStyles {
+	position: absolute;
+	left: 50%;
+	transform: translateX(-50%);
+}
+
+@mixin contactForm {
+	margin-bottom: 2em;
+	padding: 0.6em 1.2em;
+	border: none;
+	border-radius: 8px;
+	font-size: 1.6rem;
+}
+
+@mixin bgGlass {
+	background: rgba(0, 0, 0, 0.67);
+	box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+	backdrop-filter: blur(10.7px);
+	-webkit-backdrop-filter: blur(10.7px);
+	border: 1px solid rgba(0, 0, 0, 0.8);
+}
+
+@mixin whiteBgGlass {
+	background: rgba(255, 255, 255, 0.76);
+	box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+	backdrop-filter: blur(7.9px);
+	-webkit-backdrop-filter: blur(7.9px);
+	border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+@mixin contrastLogo {
+	background-position: center;
+	background-size: contain;
+	background-repeat: no-repeat;
+	border: none;
+}

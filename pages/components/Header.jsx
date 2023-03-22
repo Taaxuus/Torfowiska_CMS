@@ -1,9 +1,19 @@
-import React from "react";
+import { useState } from "react";
 
 const Header = () => {
+	const [contrastBtn, setContrastBtn] = useState(false);
+	const [contrastStyles, setContrastStyles] = useState("");
+
+	const handleContrastBtn = () => {
+		setContrastBtn((prevState) => !prevState);
+		setContrastStyles((prevState) =>
+			prevState === "" ? "contrast-styles" : ""
+		);
+	};
+
 	return (
-		<header id="header" className="header section">
-			<button className="contrast-box"></button>
+		<header id="header" className={`header section ${contrastStyles}`}>
+			<button onClick={handleContrastBtn} className="contrast-box"></button>
 			<video
 				id="videoPlayer"
 				src="./video/Final_bg_video.mp4"

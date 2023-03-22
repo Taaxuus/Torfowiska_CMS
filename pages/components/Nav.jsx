@@ -1,6 +1,7 @@
 // import Link from "next/link";
 import { useState } from "react";
-import { Link, animateScroll as scroll } from "react-scroll";
+import { Link as reactLink, animateScroll as scroll } from "react-scroll";
+import Link from "next/link";
 
 const Navigation = () => {
 	const [btnActvie, setBtnActvie] = useState(true);
@@ -49,6 +50,7 @@ const Navigation = () => {
 
 					<Link
 						activeClass="active"
+						scroll={true}
 						to="about"
 						spy={true}
 						smooth={true}
@@ -82,8 +84,13 @@ const Navigation = () => {
 						Kontakt
 					</Link>
 					<Link
+						activeClass="active"
+						// to="./pages/orders.jsx"
+						spy={true}
+						smooth={true}
+						duration={200}
+						href="/orders"
 						onClick={handleNav}
-						href="./publiorders.html"
 						className={navItemClass}>
 						Zamówienia
 					</Link>
