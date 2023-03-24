@@ -1,21 +1,22 @@
 import Order1 from "./Order1";
 import Order2 from "./Order2";
+import Link from "next/link";
 const OrdersSection = () => {
 	return (
 		<section className="public-orders section" id="publicorders">
 			<div className="header__logo--box">
-				<a
+				<Link
 					href="https://www.gov.pl/web/nfosigw/program-life"
 					target="_blank"
-					className="header__logo header__logo--1"></a>
-				<a
+					className="header__logo header__logo--1"></Link>
+				<Link
 					href="https://natura2000.gdos.gov.pl/"
 					target="_blank"
-					className="header__logo header__logo--2"></a>
-				<a
+					className="header__logo header__logo--2"></Link>
+				<Link
 					href="https://www.gov.pl/web/nfosigw"
 					target="_blank"
-					className="header__logo header__logo--3"></a>
+					className="header__logo header__logo--3"></Link>
 			</div>
 			<div className="contrast-box"></div>
 			<p className="public-orders__title">Zamówienia</p>

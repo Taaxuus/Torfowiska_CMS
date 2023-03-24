@@ -1,19 +1,20 @@
+import Link from "next/link";
 const RodoSection = () => {
 	return (
 		<section className="actus section" id="actu1">
 			<div className="header__logo--box">
-				<a
+				<Link
 					href="https://www.gov.pl/web/nfosigw/program-life"
 					target="_blank"
-					className="header__logo header__logo--1"></a>
-				<a
+					className="header__logo header__logo--1"></Link>
+				<Link
 					href="https://natura2000.gdos.gov.pl/"
 					target="_blank"
-					className="header__logo header__logo--2"></a>
-				<a
+					className="header__logo header__logo--2"></Link>
+				<Link
 					href="https://www.gov.pl/web/nfosigw"
 					target="_blank"
-					className="header__logo header__logo--3"></a>
+					className="header__logo header__logo--3"></Link>
 			</div>
 			<div className="contrast-box"></div>
 			<div className="actus__content">
