@@ -23,23 +23,47 @@ const Navigation = () => {
 
 			<nav className={navClass}>
 				<div className="nav__items">
-					<Link href="./" onClick={handleNav} className={navItemClass}>
+					<Link
+						href="./"
+						scroll={false}
+						onClick={handleNav}
+						className={navItemClass}>
 						Strona Główna
 					</Link>
-					<Link href="./#actu" onClick={handleNav} className={navItemClass}>
+					<Link
+						href="./#actu"
+						scroll={false}
+						onClick={handleNav}
+						className={navItemClass}>
 						Aktualności
 					</Link>
 
-					<Link href="./#about" onClick={handleNav} className={navItemClass}>
+					<Link
+						href="./#about"
+						scroll={false}
+						onClick={handleNav}
+						className={navItemClass}>
 						O projekcie
 					</Link>
-					<Link href="./#eco" onClick={handleNav} className={navItemClass}>
+					<Link
+						href="./#eco"
+						scroll={false}
+						onClick={handleNav}
+						className={navItemClass}>
 						Ekosystemy
 					</Link>
-					<Link href="./#contact" onClick={handleNav} className={navItemClass}>
+					<Link
+						href="./#contact"
+						scroll={false}
+						onClick={handleNav}
+						className={navItemClass}>
 						Kontakt
 					</Link>
-					<Link href="/orders" onClick={handleNav} className={navItemClass}>
+					<Link
+						href="/orders"
+						scroll={false}
+						onClick={handleNav}
+						className={navItemClass}>
 						Zamówienia
 					</Link>
 				</div>
