@@ -1,4 +1,4 @@
-import RodoPage from "./components/RodoPage";
+import RodoPage from "../components/RodoPage";
 
 export default function Rodo() {
 	return (

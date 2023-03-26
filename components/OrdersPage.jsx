@@ -1,5 +1,5 @@
-import OrdersSection from "./OrdersSection";
-import Nav from "./Nav";
+import OrdersSection from "./OrdersSection/OrdersSection";
+import Nav from "./PageStaticElements/Nav";
 
 import Footer from "./Footer";
 

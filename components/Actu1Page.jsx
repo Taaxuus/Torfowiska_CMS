@@ -1,4 +1,4 @@
-import Navigation from "./Nav";
+import Navigation from "./PageStaticElements/Nav";
 import Footer from "./Footer";
 import Link from "next/link";
 

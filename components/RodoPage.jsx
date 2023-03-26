@@ -1,6 +1,6 @@
-import Navigation from "./Nav";
+import Navigation from "./PageStaticElements/Nav";
 import Footer from "./Footer";
-import RodoSection from "./RodoSection";
+import RodoSection from "./RodoSection/RodoSection";
 
 const RodoPage = () => {
 	return (
