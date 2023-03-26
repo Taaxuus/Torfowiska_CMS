@@ -2,7 +2,7 @@ import Link from "next/link";
 import { useState } from "react";
 import Actus from "../ActusSection";
 import About from "../About";
-import EcoSection from "./EcoSection";
+import EcoSection from "../EcoSection/EcoSection";
 const Main = () => {
 	return (
 		<>
