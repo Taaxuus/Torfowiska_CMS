@@ -1,0 +1,35 @@
+.admin__panel {
+	display: flex;
+	nav {
+		min-width: 30vw;
+		display: flex;
+		flex-direction: column;
+		ul {
+			list-style: none;
+			padding: 0;
+			margin: 0;
+			li {
+				margin: 0;
+				padding: 1rem;
+				border-bottom: 1px solid #ddd;
+				&:last-child {
+					border-bottom: none;
+				}
+				ul {
+					list-style: none;
+					padding: 0;
+					margin: 0;
+					margin-left: 1rem;
+					li {
+						margin: 0;
+						padding: 1rem;
+						border-bottom: 1px solid #ddd;
+						&:last-child {
+							border-bottom: none;
+						}
+					}
+				}
+			}
+		}
+	}
+}
