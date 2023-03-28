@@ -1,17 +1,29 @@
+@import "./colors";
+@import "./components";
+@import "./mixins";
+
 .admin__panel {
 	display: flex;
 	nav {
+		padding: 4px 0;
+		li {
+			font-size: 2rem;
+			color: $pure-white;
+		}
 		min-width: 30vw;
 		display: flex;
 		flex-direction: column;
 		ul {
+			display: flex;
+			flex-direction: column;
+			gap: 20px;
 			list-style: none;
 			padding: 0;
 			margin: 0;
 			li {
 				margin: 0;
 				padding: 1rem;
-				border-bottom: 1px solid #ddd;
+				border-bottom: 1px solid $pure-white;
 				&:last-child {
 					border-bottom: none;
 				}
@@ -23,7 +35,7 @@
 					li {
 						margin: 0;
 						padding: 1rem;
-						border-bottom: 1px solid #ddd;
+						border-bottom: 1px solid $pure-white;
 						&:last-child {
 							border-bottom: none;
 						}

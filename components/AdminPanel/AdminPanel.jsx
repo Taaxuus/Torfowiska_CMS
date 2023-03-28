@@ -18,6 +18,7 @@ const AdminPanel = () => {
 			setShowActu1Editor(false);
 			setShowActu2Editor(false);
 			setShowActu3Editor(false);
+			setShowOrders(false);
 		}
 	};
 	//Show editors logic
