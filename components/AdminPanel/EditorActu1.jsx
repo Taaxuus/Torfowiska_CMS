@@ -26,7 +26,7 @@ const EditorActu1 = () => {
 					float: "right",
 					width: "70vw",
 					height: "100vh",
-					menubar: false,
+					menubar: true,
 					plugins: [
 						"advlist",
 						"autolink",
@@ -46,16 +46,20 @@ const EditorActu1 = () => {
 						"code",
 						"help",
 						"wordcount",
+						"tinydrive",
+						"insertfile",
 					],
 					toolbar:
 						"undo redo | blocks | " +
 						"bold italic forecolor | alignleft aligncenter " +
 						"alignright alignjustify | bullist numlist outdent indent | " +
-						"removeformat | help",
+						"removeformat | help" +
+						"insertfile",
 					content_style:
 						"body { font-family:Helvetica,Arial,sans-serif; font-size:14px }",
 				}}
 			/>
+
 			{/* <button onClick={log}>Log editor content</button>
 			<button onClick={dataShow}>Show me what u are writing</button> */}
 			{/* <div dangerouslySetInnerHTML={{ __html: currentData }}></div> */}
