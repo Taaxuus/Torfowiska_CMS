@@ -21,7 +21,7 @@ const Actu1 = () => {
 						</li>
 					</ul>
 					<button className="actu__card-info-btn btn-special-animation">
-						<Link href="./actu1">Czytaj wiecej</Link>
+						<Link href="/actus/1">Czytaj więcej</Link>
 					</button>
 				</div>
 			</div>

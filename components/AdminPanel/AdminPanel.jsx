@@ -1,4 +1,4 @@
-import React, { useRef, useState } from "react";
+import React, { useRef, useState, useEffect } from "react";
 import EditorActu1 from "./EditorActu1";
 import EditorActu2 from "./EditorActu2";
 import EditorActu3 from "./EditorActu3";
@@ -18,7 +18,7 @@ const AdminPanel = () => {
 			setShowActu1Editor(false);
 			setShowActu2Editor(false);
 			setShowActu3Editor(false);
-			setShowOrders(false);
+			+setShowOrders(false);
 		}
 	};
 	//Show editors logic

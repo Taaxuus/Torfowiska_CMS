@@ -1,5 +1,5 @@
 import Navigation from "./PageStaticElements/Nav";
-import Footer from "./Footer";
+import Footer from "./PageStaticElements/Footer";
 import Link from "next/link";
 
 const Actu3Page = () => {
