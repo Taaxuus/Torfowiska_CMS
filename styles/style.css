@@ -757,8 +757,12 @@
 }
 .admin__panel {
   display: flex;
+  flex-direction: column;
+  gap: 5rem;
+  align-items: center;
 }
 .admin__panel nav {
+  align-self: flex-start;
   padding: 4px 0;
   min-width: 30vw;
   display: flex;

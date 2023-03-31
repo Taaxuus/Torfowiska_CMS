@@ -4,7 +4,11 @@
 
 .admin__panel {
 	display: flex;
+	flex-direction: column;
+	gap: 5rem;
+	align-items: center;
 	nav {
+		align-self: flex-start;
 		padding: 4px 0;
 		li {
 			font-size: 2rem;

@@ -1,15 +1,15 @@
 import prisma from "@/prisma";
 
-export default async function main() {
-	await prisma.actu.create({
+export default async function handle(req, res) {
+	const { title, subtitle, image, author, content } = req.body;
+	const result = await prisma.actu.create({
 		data: {
-			title: "Alice",
-			subtitle: "alice@prisma.io",
-			content: "Hello Cezary",
-			image: "default URL",
-			author: "xxx",
+			title: title,
+			subtitle: subtitle,
+			image: image,
+			author: author,
+			content: content,
 		},
 	});
-
-	console.dir(allActu, { depth: null });
+	res.json(result);
 }
