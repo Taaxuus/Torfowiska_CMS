@@ -1,12 +1,13 @@
 import { Editor } from "@tinymce/tinymce-react";
 import React, { useRef, useState } from "react";
 
-const EditorActu1 = (props) => {
+const EditorActu1 = () => {
 	const [title, setTitle] = useState("");
 	const [subtitle, setSubtitle] = useState("");
 	const [image, setImage] = useState("");
 	const [author, setAuthor] = useState("");
 	const [content, setContent] = useState("");
+	const [id, setId] = useState(1);
 
 	//Edytor
 	const editorRef1 = useRef(null);
@@ -25,15 +26,15 @@ const EditorActu1 = (props) => {
 		console.log(title, subtitle, image, author, content);
 	};
 
-	//DATA SEND :
+	//DATA Update :
 
 	const handlerSendData = async () => {
-		if (title && subtitle && image && author && content) {
+		if (id && title && subtitle && image && content) {
 			// send a request to the server.
 			try {
 				const body = { title, subtitle, image, content, author };
 				await fetch("/api/actu", {
-					method: "POST",
+					method: "PUT",
 					headers: { "Content-Type": "application/json" },
 					body: JSON.stringify(body),
 				});
@@ -51,10 +52,9 @@ const EditorActu1 = (props) => {
 		<>
 			<h2>Edytor od tytulu</h2>
 			<Editor
-				props={props}
 				apiKey="y3u7eqq2k4olfmzjs6q11qf131aok1eakxz7m1biag94dcfv"
 				onInit={(evt, editor) => (editorRef1.current = editor)}
-				initialValue={props[0]}
+				initialValue="{props[0]}"
 				init={{
 					selector: "textarea",
 					forced_root_block: false,

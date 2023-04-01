@@ -2,9 +2,8 @@ import Navigation from "./PageStaticElements/Nav";
 import Footer from "./PageStaticElements/Footer";
 import Link from "next/link";
 
-const Actu1Page = ({
-	props: [{ title, subtitle, content, image, author }],
-}) => {
+const ActuPage = ({ props }) => {
+	const { title, subtitle, image, content, author } = props;
 	return (
 		<>
 			<Navigation />
@@ -47,4 +46,4 @@ const Actu1Page = ({
 	);
 };
 
-export default Actu1Page;
+export default ActuPage;
