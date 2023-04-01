@@ -1,7 +1,7 @@
 import { Editor } from "@tinymce/tinymce-react";
 import React, { useRef, useState } from "react";
 
-const EditorActu1 = () => {
+const EditorActu1 = (props) => {
 	const [title, setTitle] = useState("");
 	const [subtitle, setSubtitle] = useState("");
 	const [image, setImage] = useState("");
@@ -19,9 +19,9 @@ const EditorActu1 = () => {
 	const handleDataShow = () => {
 		setTitle(editorRef1.current.getContent());
 		setSubtitle(editorRef2.current.getContent());
-		setImage(editorRef3.current.getContent());
-		setAuthor(editorRef4.current.getContent());
-		setContent(editorRef5.current.getContent());
+		setContent(editorRef3.current.getContent());
+		setImage(editorRef4.current.getContent());
+		setAuthor(editorRef5.current.getContent());
 		console.log(title, subtitle, image, author, content);
 	};
 
@@ -32,12 +32,12 @@ const EditorActu1 = () => {
 			// send a request to the server.
 			try {
 				const body = { title, subtitle, image, content, author };
-				await fetch(`/api/actu`, {
+				await fetch("/api/actu", {
 					method: "POST",
 					headers: { "Content-Type": "application/json" },
 					body: JSON.stringify(body),
 				});
-				console.log("fane wyslane pomyslnie");
+				console.log("Dane wyslane pomyslnie");
 			} catch (error) {
 				console.error(error);
 			}
@@ -51,10 +51,15 @@ const EditorActu1 = () => {
 		<>
 			<h2>Edytor od tytulu</h2>
 			<Editor
+				props={props}
 				apiKey="y3u7eqq2k4olfmzjs6q11qf131aok1eakxz7m1biag94dcfv"
 				onInit={(evt, editor) => (editorRef1.current = editor)}
-				initialValue="<p>To jest pierwsza aktualnosc</p>"
+				initialValue={props[0]}
 				init={{
+					selector: "textarea",
+					forced_root_block: false,
+					force_br_newlines: true,
+					force_p_newlines: true,
 					width: "80vw",
 					height: "40vh",
 					menubar: true,
@@ -79,6 +84,7 @@ const EditorActu1 = () => {
 						"wordcount",
 						"tinydrive",
 						"insertfile",
+						"paste",
 					],
 					toolbar:
 						"undo redo | blocks | " +
@@ -90,6 +96,7 @@ const EditorActu1 = () => {
 						"body { font-family:Helvetica,Arial,sans-serif; font-size:14px }",
 				}}
 			/>
+
 			<h2>Edytor od podtytulu</h2>
 			<Editor
 				apiKey="y3u7eqq2k4olfmzjs6q11qf131aok1eakxz7m1biag94dcfv"
