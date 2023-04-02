@@ -1,7 +1,6 @@
 import React, { useRef, useState, useEffect } from "react";
-import EditorActu1 from "./EditorActu1";
-import EditorActu2 from "./EditorActu2";
-import EditorActu3 from "./EditorActu3";
+import Link from "next/link";
+import EditorActu from "./EditorActus";
 import EditorOrders from "./EditorOrders";
 
 const AdminPanel = () => {
@@ -18,37 +17,7 @@ const AdminPanel = () => {
 			setShowActu1Editor(false);
 			setShowActu2Editor(false);
 			setShowActu3Editor(false);
-			+setShowOrders(false);
-		}
-	};
-	//Show editors logic
-	const [showActu1Editor, setShowActu1Editor] = useState(false);
-	const [showActu2Editor, setShowActu2Editor] = useState(false);
-	const [showActu3Editor, setShowActu3Editor] = useState(false);
-	const [showOrders, setShowOrders] = useState(false);
-
-	const handleActuClick = (item) => {
-		setSelectedItem(item);
-		if (item === "Actu1") {
-			setShowActu1Editor(true);
-			setShowActu2Editor(false);
-			setShowActu3Editor(false);
 			setShowOrders(false);
-		} else if (item === "Actu2") {
-			setShowActu1Editor(false);
-			setShowActu2Editor(true);
-			setShowActu3Editor(false);
-			setShowOrders(false);
-		} else if (item === "Actu3") {
-			setShowActu1Editor(false);
-			setShowActu2Editor(false);
-			setShowActu3Editor(true);
-			setShowOrders(false);
-		} else if (item === "Orders") {
-			setShowActu1Editor(false);
-			setShowActu2Editor(false);
-			setShowActu3Editor(false);
-			setShowOrders(true);
 		}
 	};
 
@@ -61,19 +30,23 @@ const AdminPanel = () => {
 							Actualnosci
 							{showSubNav && (
 								<ul>
-									<li onClick={() => handleActuClick("Actu1")}>Actu1</li>
-									<li onClick={() => handleActuClick("Actu2")}>Actu2</li>
-									<li onClick={() => handleActuClick("Actu3")}>Actu3</li>
+									<Link href="/actuseditor/[id]" as="/actuseditor/1">
+										Aktualnosc 1
+									</Link>
+									<Link href="/actuseditor/[id]" as="/actuseditor/2">
+										Aktualnosc 2
+									</Link>
+									<Link href="/actuseditor/[id]" as="/actuseditor/2">
+										Aktualnosc 3
+									</Link>
 								</ul>
 							)}
 						</li>
-						<li onClick={() => handleActuClick("Orders")}>Orders</li>
+						<li>
+							<Link href={"/"}>Orders</Link>
+						</li>
 					</ul>
 				</nav>
-				{showActu1Editor && <EditorActu1 />}
-				{showActu2Editor && <EditorActu2 />}
-				{showActu3Editor && <EditorActu3 />}
-				{showOrders && <EditorOrders />}
 			</div>
 		</>
 	);
