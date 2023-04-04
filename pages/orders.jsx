@@ -7,3 +7,13 @@ export default function Orders() {
 		</>
 	);
 }
+
+export async function getServerSideProps() {
+	const allOrders = await prisma.orders.findMany({});
+
+	return {
+		props: {
+			allOrders: JSON.parse(JSON.stringify(allOrders)),
+		},
+	};
+}

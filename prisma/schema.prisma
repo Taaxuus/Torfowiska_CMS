@@ -18,3 +18,9 @@ model Actu {
   published Boolean  @default(false)
   author    String
 }
+
+model Orders {
+  id             Int    @id @default(autoincrement())
+  orderName      String
+  filesFolderUrl String
+}

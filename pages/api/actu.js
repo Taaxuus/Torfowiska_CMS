@@ -1,4 +1,4 @@
-import prisma from "@/server/prisma";
+import prisma from "@/server/prismaDB/prisma";
 
 export default async function handle(req, res) {
 	const { id, title, subtitle, image, author, content } = req.body;

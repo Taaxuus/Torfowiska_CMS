@@ -1,5 +1,5 @@
 import MainPage from "../components/MainPage";
-import prisma from "@/server/prisma";
+import prisma from "@/server/prismaDB/prisma";
 
 export default function Home({ all1Actu }) {
 	return (

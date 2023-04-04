@@ -1,7 +1,7 @@
 import { useRouter } from "next/router";
 import { useState, useEffect } from "react";
 import ActuPage from "@/components/ActuPage";
-import prisma from "@/server/prisma";
+import prisma from "@/server/prismaDB/prisma";
 
 export default function Actu({ allActus }) {
 	const router = useRouter();
