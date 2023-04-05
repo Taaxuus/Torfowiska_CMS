@@ -46,6 +46,7 @@ export default function EditorOrders({ allOrders }) {
 			},
 			body: JSON.stringify({ id }),
 		});
+
 		fetchOrders();
 	}
 
@@ -103,7 +104,7 @@ export default function EditorOrders({ allOrders }) {
 					</button>
 				)}
 			</form>
-			<table>
+			<table className="public-orders__table">
 				<thead>
 					<tr>
 						<th>orderName</th>

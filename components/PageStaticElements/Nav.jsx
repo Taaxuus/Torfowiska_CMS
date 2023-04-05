@@ -31,7 +31,7 @@ const Navigation = () => {
 						Strona Główna
 					</Link>
 					<Link
-						href="./#actu"
+						href="/#actu"
 						scroll={false}
 						onClick={handleNav}
 						className={navItemClass}>

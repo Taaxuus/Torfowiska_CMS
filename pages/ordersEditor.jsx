@@ -3,7 +3,11 @@ import prisma from "@/server/prismaDB/prisma";
 
 export default function OrdersEditor({ allOrders }) {
 	console.log(allOrders);
-	return <EditorOrders allOrders={allOrders} />;
+	return (
+		<>
+			<EditorOrders allOrders={allOrders} />;
+		</>
+	);
 }
 
 export async function getServerSideProps() {

@@ -43,7 +43,7 @@ const AdminPanel = () => {
 							)}
 						</li>
 						<li>
-							<Link href={"/"}>Orders</Link>
+							<Link href={"/ordersEditor"}>Orders</Link>
 						</li>
 					</ul>
 				</nav>
