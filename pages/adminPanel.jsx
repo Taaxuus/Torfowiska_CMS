@@ -1,22 +1,9 @@
-import AdminPanel from "@/components/AdminPanel/AdminPanel";
+import AdminNav from "@/components/AdminPanel/AdminNav";
 
-export default function AdminPage({ allActu }) {
+export default function AdminPage() {
 	return (
 		<>
-			<AdminPanel props={allActu} />
+			<AdminNav />
 		</>
 	);
 }
-//actus 1 data
-export const getServerSideProps = async () => {
-	const allActu = await prisma.actu.findMany({
-		orderBy: { id: "desc" },
-		take: 1,
-	});
-
-	return {
-		props: {
-			allActu: JSON.parse(JSON.stringify(allActu)),
-		},
-	};
-};
