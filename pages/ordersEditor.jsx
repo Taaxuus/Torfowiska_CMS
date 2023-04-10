@@ -6,8 +6,10 @@ export default function OrdersEditor({ allOrders }) {
 	console.log(allOrders);
 	return (
 		<>
-			<AdminNav />
-			<EditorOrders allOrders={allOrders} />;
+			<div className="orders__editor">
+				<AdminNav />
+				<EditorOrders allOrders={allOrders} />
+			</div>
 		</>
 	);
 }

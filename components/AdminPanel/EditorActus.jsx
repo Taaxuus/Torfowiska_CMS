@@ -65,226 +65,199 @@ const EditorActu = ({ title, subtitle, image, author, content, id }) => {
 
 	return (
 		<>
-			<h2>Edytor od tytulu</h2>
-			<Editor
-				onChange={handleTitleChange}
-				apiKey="y3u7eqq2k4olfmzjs6q11qf131aok1eakxz7m1biag94dcfv"
-				onInit={(evt, editor) => (editorRef1.current = editor)}
-				initialValue={stateTitle}
-				init={{
-					selector: "textarea",
-					forced_root_block: false,
-					force_br_newlines: true,
-					force_p_newlines: true,
-					width: "80vw",
-					height: "40vh",
-					menubar: true,
-					plugins: [
-						"advlist",
-						"autolink",
-						"lists",
-						"link",
-						"image",
-						"charmap",
-						"preview",
-						"anchor",
-						"searchreplace",
-						"visualblocks",
-						"code",
-						"fullscreen",
-						"insertdatetime",
-						"media",
-						"table",
-						"code",
-						"help",
-						"wordcount",
-						"tinydrive",
-						"insertfile",
-						"paste",
-					],
-					toolbar:
-						"undo redo | blocks | " +
-						"bold italic forecolor | alignleft aligncenter " +
-						"alignright alignjustify | bullist numlist outdent indent | " +
-						"removeformat | help" +
-						"insertfile",
-					content_style:
-						"body { font-family:Helvetica,Arial,sans-serif; font-size:14px }",
-				}}
-			/>
+			<div className="actus__editor">
+				<h2>Edytor od tytulu</h2>
+				<Editor
+					onChange={handleTitleChange}
+					apiKey="y3u7eqq2k4olfmzjs6q11qf131aok1eakxz7m1biag94dcfv"
+					onInit={(evt, editor) => (editorRef1.current = editor)}
+					initialValue={stateTitle}
+					init={{
+						selector: "textarea",
+						forced_root_block: false,
+						force_br_newlines: true,
+						force_p_newlines: true,
+						width: "80vw",
+						height: "20vh",
+						menubar: true,
+						plugins: [
+							"advlist",
+							"autolink",
+							"lists",
+							"link",
+							"image",
+							"charmap",
+							"preview",
+							"anchor",
+							"searchreplace",
+							"visualblocks",
+							"code",
+							"fullscreen",
+							"insertdatetime",
+							"media",
+							"table",
+							"code",
+							"help",
+							"wordcount",
+							"paste",
+						],
+						toolbar:
+							"undo redo | blocks | " +
+							"bold italic forecolor | alignleft aligncenter " +
+							"alignright alignjustify | bullist numlist outdent indent | " +
+							"removeformat | help" +
+							"insertfile",
+						content_style:
+							"body { font-family:Helvetica,Arial,sans-serif; font-size:14px }",
+					}}
+				/>
 
-			<h2>Edytor od podtytulu</h2>
-			<Editor
-				onChange={handleSubTitleChange}
-				apiKey="y3u7eqq2k4olfmzjs6q11qf131aok1eakxz7m1biag94dcfv"
-				onInit={(evt, editor) => (editorRef2.current = editor)}
-				initialValue={stateSubtitle}
-				init={{
-					width: "80vw",
-					height: "40vh",
-					menubar: true,
-					plugins: [
-						"advlist",
-						"autolink",
-						"lists",
-						"link",
-						"image",
-						"charmap",
-						"preview",
-						"anchor",
-						"searchreplace",
-						"visualblocks",
-						"code",
-						"fullscreen",
-						"insertdatetime",
-						"media",
-						"table",
-						"code",
-						"help",
-						"wordcount",
-						"tinydrive",
-						"insertfile",
-					],
-					toolbar:
-						"undo redo | blocks | " +
-						"bold italic forecolor | alignleft aligncenter " +
-						"alignright alignjustify | bullist numlist outdent indent | " +
-						"removeformat | help" +
-						"insertfile",
-					content_style:
-						"body { font-family:Helvetica,Arial,sans-serif; font-size:14px }",
-				}}
-			/>
-			<h2>Edytor od tresci</h2>
-			<Editor
-				onChange={handleContentChange}
-				apiKey="y3u7eqq2k4olfmzjs6q11qf131aok1eakxz7m1biag94dcfv"
-				onInit={(evt, editor) => (editorRef3.current = editor)}
-				initialValue={stateContent}
-				init={{
-					width: "80vw",
-					height: "40vh",
-					menubar: true,
-					plugins: [
-						"advlist",
-						"autolink",
-						"lists",
-						"link",
-						"image",
-						"charmap",
-						"preview",
-						"anchor",
-						"searchreplace",
-						"visualblocks",
-						"code",
-						"fullscreen",
-						"insertdatetime",
-						"media",
-						"table",
-						"code",
-						"help",
-						"wordcount",
-						"tinydrive",
-						"insertfile",
-					],
-					toolbar:
-						"undo redo | blocks | " +
-						"bold italic forecolor | alignleft aligncenter " +
-						"alignright alignjustify | bullist numlist outdent indent | " +
-						"removeformat | help" +
-						"insertfile",
-					content_style:
-						"body { font-family:Helvetica,Arial,sans-serif; font-size:14px }",
-				}}
-			/>
-			<h2>Edytor od zdjecia</h2>
-			<Editor
-				onChange={handleImageChange}
-				apiKey="y3u7eqq2k4olfmzjs6q11qf131aok1eakxz7m1biag94dcfv"
-				onInit={(evt, editor) => (editorRef4.current = editor)}
-				initialValue={stateImage}
-				init={{
-					width: "80vw",
-					height: "40vh",
-					menubar: true,
-					plugins: [
-						"advlist",
-						"autolink",
-						"lists",
-						"link",
-						"image",
-						"charmap",
-						"preview",
-						"anchor",
-						"searchreplace",
-						"visualblocks",
-						"code",
-						"fullscreen",
-						"insertdatetime",
-						"media",
-						"table",
-						"code",
-						"help",
-						"wordcount",
-						"tinydrive",
-						"insertfile",
-					],
-					toolbar:
-						"undo redo | blocks | " +
-						"bold italic forecolor | alignleft aligncenter " +
-						"alignright alignjustify | bullist numlist outdent indent | " +
-						"removeformat | help" +
-						"insertfile",
-					content_style:
-						"body { font-family:Helvetica,Arial,sans-serif; font-size:14px }",
-				}}
-			/>
-			<h2>Edytor od autora</h2>
-			<Editor
-				onChange={handleAuthorChange}
-				apiKey="y3u7eqq2k4olfmzjs6q11qf131aok1eakxz7m1biag94dcfv"
-				onInit={(evt, editor) => (editorRef5.current = editor)}
-				initialValue={stateAuthor}
-				init={{
-					width: "80vw",
-					height: "40vh",
-					menubar: true,
-					plugins: [
-						"advlist",
-						"autolink",
-						"lists",
-						"link",
-						"image",
-						"charmap",
-						"preview",
-						"anchor",
-						"searchreplace",
-						"visualblocks",
-						"code",
-						"fullscreen",
-						"insertdatetime",
-						"media",
-						"table",
-						"code",
-						"help",
-						"wordcount",
-						"tinydrive",
-						"insertfile",
-					],
-					toolbar:
-						"undo redo | blocks | " +
-						"bold italic forecolor | alignleft aligncenter " +
-						"alignright alignjustify | bullist numlist outdent indent | " +
-						"removeformat | help" +
-						"insertfile",
-					content_style:
-						"body { font-family:Helvetica,Arial,sans-serif; font-size:14px }",
-				}}
-			/>
+				<h2>Edytor od podtytulu</h2>
+				<Editor
+					onChange={handleSubTitleChange}
+					apiKey="y3u7eqq2k4olfmzjs6q11qf131aok1eakxz7m1biag94dcfv"
+					onInit={(evt, editor) => (editorRef2.current = editor)}
+					initialValue={stateSubtitle}
+					init={{
+						width: "80vw",
+						height: "20vh",
+						menubar: true,
+						plugins: [
+							"advlist",
+							"autolink",
+							"lists",
+							"link",
 
-			<button onClick={handlerSendData}>
-				Send Dane to do serwera przyjacielu
-			</button>
+							"charmap",
+							"preview",
+							"anchor",
+							"searchreplace",
+							"visualblocks",
+							"code",
+							"fullscreen",
+							"insertdatetime",
+							"media",
+							"table",
+							"code",
+							"help",
+							"wordcount",
+							"tinydrive",
+							"insertfile",
+						],
+						toolbar:
+							"undo redo | blocks | " +
+							"bold italic forecolor | alignleft aligncenter " +
+							"alignright alignjustify | bullist numlist outdent indent | " +
+							"removeformat | help" +
+							"insertfile",
+						content_style:
+							"body { font-family:Helvetica,Arial,sans-serif; font-size:14px }",
+					}}
+				/>
+				<h2>Edytor od tresci</h2>
+				<Editor
+					onChange={handleContentChange}
+					apiKey="y3u7eqq2k4olfmzjs6q11qf131aok1eakxz7m1biag94dcfv"
+					onInit={(evt, editor) => (editorRef3.current = editor)}
+					initialValue={stateContent}
+					init={{
+						width: "80vw",
+						height: "40vh",
+						menubar: true,
+						plugins: [
+							"advlist",
+							"autolink",
+							"lists",
+							"link",
+							"image",
+							"charmap",
+							"preview",
+							"anchor",
+							"searchreplace",
+							"visualblocks",
+							"code",
+							"fullscreen",
+							"insertdatetime",
+							"media",
+							"table",
+							"code",
+							"help",
+							"wordcount",
+							"tinydrive",
+							"insertfile",
+						],
+						toolbar:
+							"undo redo | blocks | " +
+							"bold italic forecolor | alignleft aligncenter " +
+							"alignright alignjustify | bullist numlist outdent indent | " +
+							"removeformat | help" +
+							"insertfile",
+						content_style:
+							"body { font-family:Helvetica,Arial,sans-serif; font-size:14px }",
+					}}
+				/>
+				<h2>Edytor od zdjecia</h2>
+				<Editor
+					onChange={handleImageChange}
+					apiKey="y3u7eqq2k4olfmzjs6q11qf131aok1eakxz7m1biag94dcfv"
+					onInit={(evt, editor) => (editorRef4.current = editor)}
+					init={{
+						width: "80vw",
+						height: "20vh",
+						menubar: true,
+						plugins: ["image"],
+						toolbar: "image",
+						content_style:
+							"body { font-family:Helvetica,Arial,sans-serif; font-size:14px }",
+					}}
+				/>
+				<h2>Edytor od autora</h2>
+				<Editor
+					onChange={handleAuthorChange}
+					apiKey="y3u7eqq2k4olfmzjs6q11qf131aok1eakxz7m1biag94dcfv"
+					onInit={(evt, editor) => (editorRef5.current = editor)}
+					initialValue={stateAuthor}
+					init={{
+						width: "80vw",
+						height: "20vh",
+						menubar: true,
+						plugins: [
+							"advlist",
+							"autolink",
+							"lists",
+							"link",
+							"image",
+							"charmap",
+							"preview",
+							"anchor",
+							"searchreplace",
+							"visualblocks",
+							"code",
+							"fullscreen",
+							"insertdatetime",
+							"media",
+							"table",
+							"code",
+							"help",
+							"wordcount",
+							"tinydrive",
+							"insertfile",
+						],
+						toolbar:
+							"undo redo | blocks | " +
+							"bold italic forecolor | alignleft aligncenter " +
+							"alignright alignjustify | bullist numlist outdent indent | " +
+							"removeformat | help" +
+							"insertfile",
+						content_style:
+							"body { font-family:Helvetica,Arial,sans-serif; font-size:14px }",
+					}}
+				/>
+
+				<button onClick={handlerSendData}>
+					Send Dane do serwera przyjacielu
+				</button>
+			</div>
 		</>
 	);
 };

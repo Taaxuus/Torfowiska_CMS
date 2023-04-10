@@ -66,6 +66,14 @@ const Navigation = () => {
 						className={navItemClass}>
 						Zamówienia
 					</Link>
+					<Link
+						href="/login"
+						target="_blank"
+						scroll={false}
+						onClick={handleNav}
+						className={navItemClass}>
+						Login
+					</Link>
 				</div>
 			</nav>
 		</>

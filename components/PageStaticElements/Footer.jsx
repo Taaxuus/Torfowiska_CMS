@@ -94,16 +94,22 @@ const Footer = () => {
 							<h3 className="footer__box-title">Menu</h3>
 							<ul className="footer__box-list">
 								<li className="footer__box-list-item">
-									<Link href="./#actu">Aktualności</Link>
+									<Link scroll={false} href="/#actu">
+										Aktualności
+									</Link>
 								</li>
 								<li className="footer__box-list-item">
-									<Link href="./#about">O projekcie</Link>
+									<Link scroll={false} href="/#about">
+										O projekcie
+									</Link>
 								</li>
 								<li className="footer__box-list-item">
-									<Link href="./#eco">Ekosystemy</Link>
+									<Link scroll={false} href="/#eco">
+										Ekosystemy
+									</Link>
 								</li>
 								<li className="footer__box-list-item">
-									<Link href="./rodo" target="_blank">
+									<Link scroll={false} href="./rodo" target="_blank">
 										Polityka prywatności &amp; RODO
 									</Link>
 								</li>

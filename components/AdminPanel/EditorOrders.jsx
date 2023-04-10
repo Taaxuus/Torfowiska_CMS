@@ -20,6 +20,7 @@ export default function EditorOrders({ allOrders }) {
 		setOrderName("");
 		setFilesFolderUrl("");
 		fetchOrders();
+		window.location.reload();
 	}
 
 	async function handleUpdate() {
@@ -36,6 +37,7 @@ export default function EditorOrders({ allOrders }) {
 		setEditingId(null);
 		setEditMode(false);
 		fetchOrders();
+		window.location.reload();
 	}
 
 	async function handleDelete(id) {
@@ -46,8 +48,9 @@ export default function EditorOrders({ allOrders }) {
 			},
 			body: JSON.stringify({ id }),
 		});
-
+		alert("zamownienie zostalo usuniete");
 		fetchOrders();
+		window.location.reload();
 	}
 
 	function handleEdit(id) {
@@ -81,17 +84,17 @@ export default function EditorOrders({ allOrders }) {
 	};
 
 	return (
-		<div>
-			<h1>Orders</h1>
+		<div className="orders__editor__window">
+			<h1>Zamowienia</h1>
 			<form onSubmit={handleSubmit}>
-				<label htmlFor="orderName">orderName:</label>
+				<label htmlFor="orderName">OrderName</label>
 				<input
 					type="text"
 					id="orderName"
 					value={orderName}
 					onChange={(e) => setOrderName(e.target.value)}
 				/>
-				<label htmlFor="filesFolderUrl">filesFolderUrl:</label>
+				<label htmlFor="filesFolderUrl">FilesFolderUrl</label>
 				<textarea
 					id="filesFolderUrl"
 					value={filesFolderUrl}
@@ -104,11 +107,11 @@ export default function EditorOrders({ allOrders }) {
 					</button>
 				)}
 			</form>
-			<table className="public-orders__table">
+			<table className="orders__editor__table">
 				<thead>
 					<tr>
-						<th>orderName</th>
-						<th>filesFolderUrl</th>
+						<th>OrderName</th>
+						<th>FilesFolderUrl</th>
 						<th>Actions</th>
 					</tr>
 				</thead>

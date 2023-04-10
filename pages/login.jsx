@@ -1,53 +1,57 @@
-import { signIn, useSession } from "next-auth/react";
+import { useState, useEffect } from "react";
 import { useRouter } from "next/router";
-import { useState } from "react";
+import cookies from "js-cookie";
 
-export default function Login() {
+export default function LoginPage() {
 	const [email, setEmail] = useState("");
 	const [password, setPassword] = useState("");
-	const [errorMessage, setErrorMessage] = useState("");
+	const [isLoading, setIsLoading] = useState(false);
 	const router = useRouter();
-	const { data: session } = useSession();
 
-	async function handleSubmit(event) {
+	async function handleLogin(event) {
 		event.preventDefault();
-
-		const result = await signIn("credentials", {
-			redirect: false,
-			email,
-			password,
+		setIsLoading(true);
+		const response = await fetch("/api/login", {
+			method: "POST",
+			headers: {
+				"Content-Type": "application/json",
+			},
+			body: JSON.stringify({ email, password }),
 		});
-
-		if (result.error) {
-			setErrorMessage(result.error);
+		if (response.ok) {
+			const { token } = await response.json();
+			document.cookie = `token=${token}; path=/`;
+			alert("You are logged in");
+			router.push("/adminPanel"); // Redirect to admin panel
 		} else {
-			console.log(session); // log the session information
-			router.push("/");
+			alert("Invalid email or password.");
 		}
+		setIsLoading(false);
 	}
 
 	return (
-		<form onSubmit={handleSubmit}>
-			<div>
-				<label htmlFor="email">Email:</label>
-				<input
-					type="email"
-					id="email"
-					value={email}
-					onChange={(event) => setEmail(event.target.value)}
-				/>
-			</div>
-			<div>
-				<label htmlFor="password">Password:</label>
-				<input
-					type="password"
-					id="password"
-					value={password}
-					onChange={(event) => setPassword(event.target.value)}
-				/>
-			</div>
-			{errorMessage && <div>{errorMessage}</div>}
-			<button type="submit">Log In</button>
-		</form>
+		<div className="login__page">
+			<form className="login__page--form" onSubmit={handleLogin}>
+				<label>
+					Email
+					<input
+						type="email"
+						value={email}
+						onChange={(e) => setEmail(e.target.value)}
+					/>
+				</label>
+				<label>
+					Password
+					<input
+						type="password"
+						value={password}
+						onChange={(e) => setPassword(e.target.value)}
+					/>
+				</label>
+				<button type="submit" disabled={isLoading}>
+					{isLoading ? "Loading..." : "Log in"}
+				</button>
+			</form>
+		</div>
 	);
 }

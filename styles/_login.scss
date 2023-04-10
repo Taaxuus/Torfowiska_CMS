@@ -1,0 +1,48 @@
+@import "./colors";
+@import "./components";
+@import "./mixins";
+
+.login__page {
+	background-image: url(../public/img/A-raised-bog-743322.jpg);
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+	background-color: $pure-white;
+	height: 100vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	&--form {
+		color: $pure-white;
+		padding: 6em;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		gap: 2em;
+		@include bgGlass;
+		border-radius: 12px;
+
+		label {
+			display: flex;
+			flex-direction: column;
+			font-size: 1.3em;
+		}
+
+		input {
+			height: 2.5em;
+		}
+
+		button {
+			padding: 1em 3em;
+			cursor: pointer;
+			border-radius: 12px;
+			transition: all 0.5s;
+
+			&:hover {
+				scale: 1.1;
+			}
+		}
+	}
+}

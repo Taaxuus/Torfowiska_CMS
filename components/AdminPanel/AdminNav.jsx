@@ -16,7 +16,7 @@ const AdminNav = () => {
 	return (
 		<>
 			<div className="admin__panel">
-				<nav>
+				<nav className="admin__nav">
 					<ul>
 						<li onClick={() => handleItemClick("Actualnosci")}>
 							Actualnosci

@@ -1,9 +1,12 @@
 import AdminNav from "@/components/AdminPanel/AdminNav";
+import withAuth from "@/components/withAuth";
 
-export default function AdminPage() {
+function AdminPage() {
 	return (
 		<>
 			<AdminNav />
 		</>
 	);
 }
+
+export default AdminPage;
