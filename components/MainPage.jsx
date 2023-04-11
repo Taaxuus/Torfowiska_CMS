@@ -3,12 +3,12 @@ import Nav from "./PageStaticElements/Nav";
 import Main from "./PageStaticElements/Main";
 import Footer from "./PageStaticElements/Footer";
 
-export default function MainPage(props) {
+export default function MainPage({ props }) {
 	return (
 		<>
 			<Nav />
 			<Header />
-			<Main />
+			<Main props={props} />
 			<Footer />
 		</>
 	);

@@ -1,12 +1,11 @@
-import Link from "next/link";
-import { useState } from "react";
 import Actus from "../ActusSection";
 import About from "../About";
 import EcoSection from "../EcoSection/EcoSection";
-const Main = () => {
+const Main = ({ props }) => {
+	console.log(props);
 	return (
 		<>
-			<Actus />
+			<Actus props={props} />
 			<About />
 			<EcoSection />
 		</>

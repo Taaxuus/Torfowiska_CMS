@@ -835,6 +835,7 @@
   font-size: 1em;
   border-radius: 12px;
   padding: 1em 3em;
+  cursor: pointer;
   background-color: lightgreen;
   transition: all 0.3s;
 }

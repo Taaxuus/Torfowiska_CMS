@@ -1,20 +1,20 @@
 import MainPage from "../components/MainPage";
 import prisma from "@/server/prismaDB/prisma";
 
-export default function Home({ all1Actu }) {
+export default function Home({ allActus }) {
 	return (
 		<>
-			<MainPage />
+			<MainPage props={allActus} />
 		</>
 	);
 }
 
-export const getServerSideProps = async () => {
-	const all1Actu = await prisma.actu.findMany();
+export async function getServerSideProps() {
+	const allActus = await prisma.actu.findMany({});
 
 	return {
 		props: {
-			allActu: JSON.parse(JSON.stringify(all1Actu)),
+			allActus: JSON.parse(JSON.stringify(allActus)),
 		},
 	};
-};
+}

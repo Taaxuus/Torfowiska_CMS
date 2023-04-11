@@ -54,6 +54,7 @@ const EditorActu = ({ title, subtitle, image, author, content, id }) => {
 					body: JSON.stringify(body),
 				});
 				console.log("Data sent successfully");
+				alert("Dane na serwerze zaaktualizowane ");
 			} catch (error) {
 				console.error(error);
 			}
