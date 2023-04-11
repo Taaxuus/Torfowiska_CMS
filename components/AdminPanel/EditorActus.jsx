@@ -17,23 +17,18 @@ const EditorActu = ({ title, subtitle, image, author, content, id }) => {
 	//Data on change updating of each form
 	const handleTitleChange = () => {
 		setTitle(editorRef1.current.getContent());
-		console.log(stateTitle);
 	};
 	const handleSubTitleChange = () => {
 		setSubtitle(editorRef2.current.getContent());
-		console.log(stateSubtitle);
 	};
 	const handleContentChange = () => {
 		setContent(editorRef3.current.getContent());
-		console.log(stateContent);
 	};
 	const handleImageChange = () => {
 		setImage(editorRef4.current.getContent());
-		console.log(stateImage);
 	};
 	const handleAuthorChange = () => {
 		setAuthor(editorRef5.current.getContent());
-		console.log(stateAuthor);
 	};
 
 	const handlerSendData = async () => {

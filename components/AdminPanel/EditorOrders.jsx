@@ -7,7 +7,7 @@ export default function EditorOrders({ allOrders }) {
 	const [editMode, setEditMode] = useState(false);
 	const [editingId, setEditingId] = useState(null);
 	const [Orders, setOrders] = useState(allOrders);
-
+	//creating function
 	async function handleCreate() {
 		await fetch("/api/orders", {
 			method: "POST",
@@ -22,7 +22,7 @@ export default function EditorOrders({ allOrders }) {
 		fetchOrders();
 		window.location.reload();
 	}
-
+	//Updating function
 	async function handleUpdate() {
 		await fetch(`/api/orders`, {
 			method: "PUT",
@@ -39,7 +39,7 @@ export default function EditorOrders({ allOrders }) {
 		fetchOrders();
 		window.location.reload();
 	}
-
+	// Deleting function
 	async function handleDelete(id) {
 		await fetch(`/api/orders`, {
 			method: "DELETE",
@@ -52,7 +52,7 @@ export default function EditorOrders({ allOrders }) {
 		fetchOrders();
 		window.location.reload();
 	}
-
+	//editing function
 	function handleEdit(id) {
 		const orderToEdit = allOrders.find((order) => order.id === id);
 		setOrderName(orderToEdit.orderName);
@@ -60,20 +60,20 @@ export default function EditorOrders({ allOrders }) {
 		setEditingId(id);
 		setEditMode(true);
 	}
-
+	//cancel of editing function
 	function handleCancelEdit() {
 		setOrderName("");
 		setFilesFolderUrl("");
 		setEditingId(null);
 		setEditMode(false);
 	}
-
+	//Getting/fetching all orders
 	async function fetchOrders() {
 		const res = await fetch("/api/orders");
 		const orders = await res.json();
 		setOrders(orders);
 	}
-
+	//form validation
 	const handleSubmit = (e) => {
 		e.preventDefault();
 		if (editMode) {
@@ -116,16 +116,18 @@ export default function EditorOrders({ allOrders }) {
 					</tr>
 				</thead>
 				<tbody>
-					{allOrders.map((order) => (
-						<tr key={order.id}>
-							<td>{order.orderName}</td>
-							<td>{order.filesFolderUrl}</td>
-							<td>
-								<button onClick={() => handleEdit(order.id)}>Edit</button>
-								<button onClick={() => handleDelete(order.id)}>Delete</button>
-							</td>
-						</tr>
-					))}
+					{allOrders
+						.sort((a, b) => a.id - b.id)
+						.map((order) => (
+							<tr key={order.id}>
+								<td>{order.orderName}</td>
+								<td>{order.filesFolderUrl}</td>
+								<td>
+									<button onClick={() => handleEdit(order.id)}>Edit</button>
+									<button onClick={() => handleDelete(order.id)}>Delete</button>
+								</td>
+							</tr>
+						))}
 				</tbody>
 			</table>
 		</div>

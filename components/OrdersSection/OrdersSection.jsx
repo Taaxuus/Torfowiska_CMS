@@ -28,20 +28,22 @@ const OrdersSection = ({ orders }) => {
 						</tr>
 					</thead>
 					<tbody>
-						{orders.map((order, index) => (
-							<tr className="public-orders__order" key={order.id}>
-								<td>{index + 1}.</td>
-								<td>{order.orderName}</td>
-								<td className="download-box">
-									<a
-										className="btn-download"
-										href={order.filesFolderUrl}
-										download>
-										<i className={`fa-solid fa-file-download`}></i>
-									</a>
-								</td>
-							</tr>
-						))}
+						{orders
+							.sort((a, b) => a.id - b.id)
+							.map((order, index) => (
+								<tr className="public-orders__order" key={order.id}>
+									<td>{index + 1}.</td>
+									<td>{order.orderName}</td>
+									<td className="download-box">
+										<a
+											className="btn-download"
+											href={order.filesFolderUrl}
+											download>
+											<i className={`fa-solid fa-file-download`}></i>
+										</a>
+									</td>
+								</tr>
+							))}
 					</tbody>
 				</table>
 			</div>

@@ -1,13 +1,11 @@
 import Link from "next/link";
 
 const Actus = ({ props }) => {
-	const actu1 = props[1];
-	const actu2 = props[2];
-	const actu3 = props[0];
+	const sortedProps = props.sort((a, b) => a.id - b.id);
+	const actu1 = sortedProps[0];
+	const actu2 = sortedProps[1];
+	const actu3 = sortedProps[2];
 
-	console.log(actu1);
-	console.log(actu2);
-	console.log(actu3);
 	return (
 		<>
 			<section
